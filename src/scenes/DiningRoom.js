@@ -10,7 +10,7 @@ class DiningRoom extends Phaser.Scene {
         this.load.image('chairSeatSide', "assets/chairSeatSide.png");
         this.load.image('tableSurface', "assets/tableSurface.png");
         this.load.image('needle', "assets/needle.png");
-        this.load.image('ropeCoil', "assets/ropecoil.png");
+        this.load.image('ropeCoil', "assets/ropeCoil.png");
         this.load.image('stool', "assets/stool.png");
         this.load.spritesheet('PeefSide', "assets/PeefSide.png", {frameWidth: 50, frameHeight: 60});
         this.load.image('clearDoor', "assets/clearDoor.png");
