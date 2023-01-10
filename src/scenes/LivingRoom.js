@@ -136,11 +136,14 @@ class LivingRoom extends Phaser.Scene {
         }
 
         if (this.checkCollision(this.p1, this.ropeSpot) && Phaser.Input.Keyboard.JustDown(this.keyT)){
-            inventory.splice(inventory.indexOf("rope"));
-            this.ropeSpot.destroy();
-            this.rope = this.physics.add.sprite(628, 420, 'ropeClimb');
-            this.rope.body.immovable = true;
-            this.rope.body.allowGravity = false;
+            if (this.has("rope")){
+                this.takeOut("rope");
+                this.ropeSpot.destroy();
+                this.rope = this.physics.add.sprite(628, 420, 'ropeClimb');
+                this.rope.body.immovable = true;
+                this.rope.body.allowGravity = false;
+            }
+            
         }
 
         if (this.rope && this.checkCollision(this.p1, this.rope) && this.keyT.isDown){
